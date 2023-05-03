@@ -4,6 +4,57 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0 0 30px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 0 0 30px;
+      text-align: justify;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .col-md-12 {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -14,55 +65,45 @@
           <h1>Homepage</h1>
           <p>
             The Google app script extension is designed to assist the Global Parenting Initiative (GPI) team with their
-            development tasks.The extension has several key features that help the user create and manage their
+            development tasks. The extension has several key features that help the user create and manage their
             templates and feeds.
             <br> <br>
 
             The first feature is called "Initialize," which creates two types of sheets in Google Sheets. The first
-            sheet, the
-            Sidekick Sheet, is always hidden. The second sheet is the Content List Sheet, where all the values of the
-            flow type
-            column are taken from the Sidekick Sheet.
+            sheet, the Sidekick Sheet, is always hidden. The second sheet is the Content List Sheet, where all the
+            values of the
+            flow type column are taken from the Sidekick Sheet.
 
             <br> <br>
 
             The second feature is called "Insert," which allows the user to create three types of sheets: Global Sheet,
-            Template
-            Sheet, and Database Sheet. The user can select which sheet type they want to create, and a new sheet will be
-            created
-            automatically.
+            Template Sheet, and Database Sheet. The user can select which sheet type they want to create, and a new
+            sheet will be
+            created automatically.
 
             <br> <br>
 
             All the sheet types are created using a custom formatting template that uses data formatting and custom
-            formatting, data
-            validation, and customer formatting available in Google Sheets. The variables available for each column are
-            specified in
-            the extension, making it easy for the user to create and manage their templates and feeds.
+            formatting, data validation, and customer formatting available in Google Sheets. The variables available for
+            each column are
+            specified in the extension, making it easy for the user to create and manage their templates and feeds.
 
             <br> <br>
 
             The GPI Sidekick extension also has a GitHub action feature, which includes a pull request functionality.
-            The user can
-            push images to the GitHub repository without using GitHub by selecting the folder in their Google Drive and
-            syncing it
-            with the extension.
+            The user can push images to the GitHub repository without using GitHub by selecting the folder in their
+            Google Drive and
+            syncing it with the extension.
 
             <br> <br>
 
             Lastly, the Doc feature is used to create a Google Doc for each row available in a sheet. The user can
-            initialize a Doc
-            for each row and sync it with the Google Sheet to update any changes made in the sheet.
+            initialize a Doc for each row and sync it with the Google Sheet to update any changes made in the sheet.
 
             <br> <br>
 
             Overall, the GPI Sidekick extension provides a range of useful features to help the IDEMS teams manage their
-            templates
-            and feeds easily and efficiently.
+            templates and feeds easily and efficiently.
           </p>
         </div>
       </div>
-    </div>
-  </main>
-
-</html>
