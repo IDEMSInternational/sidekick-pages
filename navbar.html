@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    list-style: none;
+    margin-bottom: 40px;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  nav a:hover {
+    text-decoration: none;
+  }
+</style>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="/" onclick="changeUrl(this.href); return false;">Home</a></li>
+      <li><a href="/privacy-policy.html" onclick="changeUrl(this.href); return false;">Privacy Policy</a></li>
+      <li><a href="/support.html" onclick="changeUrl(this.href); return false;">Support</a></li>
+      <li><a href="/terms-of-service.html" onclick="changeUrl(this.href); return false;">Terms of Service</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
