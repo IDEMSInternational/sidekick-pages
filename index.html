@@ -1,133 +1,155 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="/favicon.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#includedContent").load("navbar.html");
+      });
+    </script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script>
-    $(function () {
-      $("#includedContent").load("navbar.html");
-    });
-  </script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
 
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+      main {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
 
-    main {
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
-
-    h1 {
-      font-size: 32px;
-      font-weight: bold;
-      margin: 0 0 30px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
-      margin: 0 0 30px;
-      text-align: justify;
-    }
-
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @media (min-width: 768px) {
       .container {
-        display: flex;
-        flex-wrap: wrap;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 15px;
       }
 
-      .col-md-12 {
-        flex-basis: 100%;
-        max-width: 100%;
+      h1 {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0 0 30px;
+        text-align: center;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <main>
-    <div class="container">
-      <div class="row">
-        <div id="includedContent"></div>
+      p {
+        font-size: 18px;
+        margin: 0 0 30px;
+        text-align: justify;
+      }
 
-        <div class="col-md-12">
-          <h1>Homepage</h1>
+      a {
+        color: #007bff;
+        text-decoration: none;
+      }
 
-          <br> <br>
-          <b>Note: GPI sidekick docs and GPI sidekick sheets work together to get full functionality.</b>
-          <br> <br>
+      a:hover {
+        text-decoration: underline;
+      }
 
-          <p>
-            The Google app script extension is designed to assist the Global Parenting Initiative (GPI) team with their
-            development tasks. The extension has several key features that help the user create and manage their sheets
-            and docs to create to provide convinience in development.
-            <br> <br>
+      @media (min-width: 768px) {
+        .container {
+          display: flex;
+          flex-wrap: wrap;
+        }
 
-            The first feature is called "Initialize," which creates two types of sheets in Google Sheets. The first
-            sheet, the Sidekick Sheet, is always hidden. The second sheet is the Content List Sheet, where all the
-            values of the
-            flow type column are taken from the Sidekick Sheet.
+        .col-md-12 {
+          flex-basis: 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
 
-            <br> <br>
+  <body>
+    <main>
+      <div class="container">
+        <div class="row">
+          <div id="includedContent"></div>
 
-            The second feature is called "Insert," which allows the user to create three types of sheets: Global Sheet,
-            Template Sheet, and Database Sheet. The user can select which sheet type they want to create, and a new
-            sheet will be
-            created automatically.
+          <div class="col-md-12">
+            <h1>Homepage</h1>
 
-            <br> <br>
+            <br />
+            <br />
+            <b
+              >Note: GPI sidekick docs and GPI sidekick sheets work together to
+              get full functionality.</b
+            >
+            <br />
+            <br />
 
-            All the sheet types are created using a custom formatting template that uses data formatting and custom
-            formatting, data validation, and customer formatting available in Google Sheets. The variables available for
-            each column are
-            specified in the extension, making it easy for the user to create and manage their templates and feeds.
+            <p>
+              The Google app script extension is designed to assist the Global
+              Parenting Initiative (GPI) team with their development tasks. The
+              extension has several key features that help the user create and
+              manage their sheets and docs to create to provide convinience in
+              development.
+              <br />
+              <br />
 
-            <br> <br>
+              The first feature is called "Initialize," which creates two types
+              of sheets in Google Sheets. The first sheet, the Sidekick Sheet,
+              is always hidden. The second sheet is the Content List Sheet,
+              where all the values of the flow type column are taken from the
+              Sidekick Sheet.
 
-            The GPI Sidekick extension also has a GitHub action feature, which includes a pull request functionality.
-            The user can push images to the GitHub repository without using GitHub by selecting the folder in their
-            Google Drive and
-            syncing it with the extension.
+              <br />
+              <br />
 
-            <br> <br>
+              The second feature is called "Insert," which allows the user to
+              create three types of sheets: Global Sheet, Template Sheet, and
+              Database Sheet. The user can select which sheet type they want to
+              create, and a new sheet will be created automatically.
 
-            Lastly, the Doc feature is used to create a Google Doc for each row available in a sheet. The user can
-            initialize a Doc for each row and sync it with the Google Sheet to update any changes made in the sheet.
+              <br />
+              <br />
 
-            <br> <br>
+              All the sheet types are created using a custom formatting template
+              that uses data formatting and custom formatting, data validation,
+              and customer formatting available in Google Sheets. The variables
+              available for each column are specified in the extension, making
+              it easy for the user to create and manage their templates and
+              feeds.
 
-            Overall, the GPI Sidekick extensions provides a range of useful features to help the IDEMS teams manage
-            their
-            templates and feeds easily and efficiently.
-          </p>
+              <br />
+              <br />
+
+              The GPI Sidekick extension also has a GitHub action feature, which
+              includes a pull request functionality. The user can push images to
+              the GitHub repository without using GitHub by selecting the folder
+              in their Google Drive and syncing it with the extension.
+
+              <br />
+              <br />
+
+              Lastly, the Doc feature is used to create a Google Doc for each
+              row available in a sheet. The user can initialize a Doc for each
+              row and sync it with the Google Sheet to update any changes made
+              in the sheet.
+
+              <br />
+              <br />
+
+              Overall, the GPI Sidekick extensions provides a range of useful
+              features to help the IDEMS teams manage their templates and feeds
+              easily and efficiently.
+            </p>
+          </div>
         </div>
-      </div> -->
-
-google-site-verification: googlec07135a94dca9be8.html
+      </div>
+    </main>
+  </body>
+</html>
