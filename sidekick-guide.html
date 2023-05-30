@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Privacy policy</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link
       rel="stylesheet"
@@ -74,12 +72,15 @@
         margin-left: 1rem;
       }
       h3{
-        font-weight:800;
+        /* font-weight:800; */
       }
       .h3 {
         margin-left: 3rem;
       }
       ul{}
+      b{
+        font-weight:800;
+      }
     </style>
     <style></style>
   </head>
@@ -104,6 +105,7 @@
                     <li>
                         First table with containing data of a single row in sheet.
                     </li>
+                    <li>The heading of the data represent the <b>ID</b> row name in the sheet.</li>
                     <li>
                         Second table containing the metadata of the sheet. It contain spreadsheet link and sheet name.
                     </li>
@@ -115,12 +117,48 @@
                 You can see sample data in this
                 <a href="
                 https://docs.google.com/document/d/1LcrkWg6F3BLP9uMZwp9Abjk60zQr93u_2iQ2fOGA92k/edit
-                ">Document </a>.
+                " target="_blank">Document </a>.
               </p>
-              <p style="margin: 0">For testing purpose you can use the exact data.</p>
+              <p style="margin: 0">For <b>testing purpose</b> you can use the exact data.</p>
 
             </div>
+
+            <h2 style="margin-top: 4rem;">GPI Sidekick for sheets guide</h2>
+            <div class="sheets-guide h3">
+              <h3>1. Sync with doc</h3>
+              <p style="margin: 0">
+                To sync with doc, you should have atleast two columns.
+                <ul>
+                    <li>
+                        First Column with the heading of <b>ID</b>.
+                    </li>
+                    <li>
+                        Second column containing some data with some heading.
+                    </li>
+                    <li>Then at the end we have "attached_single_doc" and/or "attached_doc" column in the end. They represent attached doc for full sheet or attached doc for every row resspectively. If they does not exist already, you can create them. </li>
+                </ul>
+              </p>
+
+              <div style="margin-left: 1rem;">
+                  <h3>Sample data</h3>
+                  <p style="margin: 0">
+                    You can see sample data in this
+                    <a href="
+                  https://docs.google.com/spreadsheets/d/1NbBgJqqX_kTdfeLQ7_b9Xc_Z_9OGr7_xOYF5hRKG0lE/edit#gid=1619684387                " target="_blank">Sheet </a>.
+                  </p>
+                  <p style="margin: 0">For <b>testing purpose</b> you can use the exact data, or make a copy of document.</p>
+              </div>
+
+              <h3>2. Insert a sheet</h3>
+                <p>You can insert any existing boilerplate sheet into the project </p>
+
+                <h3>3. Github actions</h3>
+                <p>You can select any folder form google drive and create pull request for it. Currently it support images only. This feature is in progress.</p>
+
+            <h3>4. Initialize</h3>
+            <p>You will see this option first time only, it creates metadata sheets for the working of boilerplate sheets validation.</p>
           </div>
+          
         </div>
       </div>
     </main>
