@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <title>Sidekick Guide</title>
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link
@@ -71,15 +74,16 @@
       h2 {
         margin-left: 1rem;
       }
-      h3{
+      h3 {
         /* font-weight:800; */
       }
       .h3 {
         margin-left: 3rem;
       }
-      ul{}
-      b{
-        font-weight:800;
+      ul {
+      }
+      b {
+        font-weight: 800;
       }
     </style>
     <style></style>
@@ -91,76 +95,112 @@
         <div class="row">
           <div class="col-md-12">
             <h1>GPI Sidekick guide</h1>
-
             <p>
-              Please note that sheet to doc and doc to sheet sync are creted to better working in a team.
+              Please note that sheet to doc and doc to sheet sync are created to
+              better work in a team.
             </p>
-
-            <h2>GPI Sidekick For Docs Guide</h2>
-            <div class="docs-guide h3">
-              <h3>1. Sync with sheet</h3>
-              <p style="margin: 0">
-                To sync with sheet, you should have atleast two tables.
-                <ul>
-                    <li>
-                        First table with containing data of a single row in sheet. It should have heading of the representing row in sheet.
-                    </li>
-                    <li>The heading of the data represent the <b>ID</b> row name in the sheet.</li>
-                    <li>
-                        Second table containing the metadata of the sheet. It contain spreadsheet link and sheet name. It should have heading of 'Metadata'.
-                    </li>
-                </ul>
-              </p>
-
-              <p>Also remember that sheet data needs to be in specific format. Please refer to 'GPI Sidekick for sheets guide' section below to see that guide. </p>
-
-              <h3>Sample data</h3>
-              <p style="margin: 0">
-                You can see sample data in this
-                <a href="
-                https://docs.google.com/document/d/1LcrkWg6F3BLP9uMZwp9Abjk60zQr93u_2iQ2fOGA92k/edit
-                " target="_blank">Document </a>.
-              </p>
-              <p style="margin: 0">For <b>testing purpose</b> you can use the exact data.</p>
-
-            </div>
-
-            <h2 style="margin-top: 4rem;">GPI Sidekick for sheets guide</h2>
+            <h2>GPI Sidekick for sheets guide</h2>
             <div class="sheets-guide h3">
               <h3>1. Sync with doc</h3>
               <p style="margin: 0">
-                To sync with doc, you should have atleast two columns.
-                <ul>
-                    <li>
-                        First Column with the heading of <b>ID</b>.
-                    </li>
-                    <li>
-                        Second column containing some data with some heading.
-                    </li>
-                    <li>Then at the end we have "attached_single_doc" and/or "attached_doc" column in the end. They represent attached doc for full sheet or attached doc for every row resspectively. If they does not exist already, you can create them. </li>
-                </ul>
+                To sync with doc, you should have at least two columns.
               </p>
 
-              <div style="margin-left: 1rem;">
-                  <h3>Sample data</h3>
-                  <p style="margin: 0">
-                    You can see sample data in this
-                    <a href="
-                  https://docs.google.com/spreadsheets/d/1NbBgJqqX_kTdfeLQ7_b9Xc_Z_9OGr7_xOYF5hRKG0lE/edit#gid=1619684387                " target="_blank">Sheet </a>.
-                  </p>
-                  <p style="margin: 0">For <b>testing purpose</b> you can use the exact data, or make a copy of document.</p>
-              </div>
-
+              <ul>
+                <li>First Column with the heading of <b>ID</b>.</li>
+                <li>Second column containing some data with some heading.</li>
+                <li>
+                  Then at the end, we have "attached_single_doc" and/or
+                  "attached_doc" column. They represent attached doc for the
+                  full sheet or attached doc for every row respectively. If they
+                  do not exist already, you can create them.
+                </li>
+              </ul>
+              <p style="margin: 0">
+                <b>Sync limitations in case of attached_single_doc:</b>
+              </p>
+              <ul>
+                <li>
+                  If we add a new row in the sheet, it will not be synced to the
+                  existing attached_single_doc document. For that, we have to
+                  delete the existing link and initialize again to create a new
+                  document.
+                </li>
+                <li>
+                  We cannot change the ID of the document once the document is
+                  created because it is synced based on the row ID present in
+                  the document and the sheet.
+                </li>
+              </ul>
+              <h3>Sample data</h3>
+              <p style="margin: 0">
+                You can see sample data in this
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1NbBgJqqX_kTdfeLQ7_b9Xc_Z_9OGr7_xOYF5hRKG0lE/edit#gid=1619684387"
+                  target="_blank"
+                  >Sheet</a
+                >.
+              </p>
+              <p style="margin: 0">
+                For <b>testing purposes</b>, you can use the exact data or make
+                a copy of the document.
+              </p>
               <h3>2. Insert a sheet</h3>
-                <p>You can insert any existing boilerplate sheet into the project </p>
-<!-- 
-                <h3>3. Github actions</h3>
-                <p>You can select any folder form google drive and create pull request for it. Currently it support images only. This feature is in progress.</p> -->
-
-            <h3>3. Initialize</h3>
-            <p>You will see this option first time only, it creates metadata sheets for the working of boilerplate sheets validation.</p>
+              <p>
+                You can insert any existing boilerplate sheet into the project.
+              </p>
+              <h3>3. Initialize</h3>
+              <p>
+                You will see this option the first time only. It creates
+                metadata sheets for the working of boilerplate sheets
+                validation.
+              </p>
+            </div>
           </div>
-          
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <h2 style="margin-top: 2rem">GPI Sidekick For Docs Guide</h2>
+            <div class="docs-guide h3">
+              <h3>1. Sync with sheet</h3>
+              <p style="margin: 0">
+                To sync with the sheet, you should have at least two tables.
+              </p>
+
+              <ul>
+                <li>
+                  First table containing data of a single row in the sheet. It
+                  should have the heading representing the row in the sheet.
+                </li>
+                <li>
+                  The heading of the data represents the <b>ID</b> row name in
+                  the sheet.
+                </li>
+                <li>
+                  Second table containing the metadata of the sheet. It contains
+                  a spreadsheet link and sheet name. It should have a heading of
+                  'Metadata'.
+                </li>
+              </ul>
+              <p>
+                Also remember that sheet data needs to be in a specific format.
+                Please refer to the 'GPI Sidekick for sheets guide' section
+                below to see that guide.
+              </p>
+              <h3>Sample data</h3>
+              <p style="margin: 0">
+                You can see sample data in this
+                <a
+                  href="https://docs.google.com/document/d/1LcrkWg6F3BLP9uMZwp9Abjk60zQr93u_2iQ2fOGA92k/edit"
+                  target="_blank"
+                  >Document</a
+                >.
+              </p>
+              <p style="margin: 0">
+                For <b>testing purposes</b>, you can use the exact data.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
